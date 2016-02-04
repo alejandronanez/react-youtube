@@ -27,9 +27,11 @@
   },
   "homepage": "https://github.com/alejandronanez/react-boilerplate#readme",
   "dependencies": {
+    "bootstrap": "3.3.6",
     "hjs-webpack": "7.0.0",
     "react": "0.14.7",
-    "react-dom": "0.14.7"
+    "react-dom": "0.14.7",
+    "youtube-api-search": "0.0.5"
   },
   "devDependencies": {
     "autoprefixer": "6.3.1",
