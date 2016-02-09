@@ -4,6 +4,7 @@ import YTSearch from 'youtube-api-search';
 require('bootstrap/dist/css/bootstrap.min.css');
 
 import SearchBar from './components/search-bar';
+import VideoDetail from './components/video-detail';
 import VideList from './components/video-list';
 const API_KEY = require('./youtube-api.json').API_KEY;
 
@@ -23,6 +24,7 @@ class App extends Component {
         return (
             <div>
                 <SearchBar />
+                <VideoDetail video={this.state.videos[0]} />
                 <VideList videos={this.state.videos} />
             </div>
         );
