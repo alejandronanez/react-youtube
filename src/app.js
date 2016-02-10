@@ -16,7 +16,8 @@ class App extends Component {
             videos: [],
             selectedVideo: null
         };
-
+    }
+    componentDidMount() {
         YTSearch({key: API_KEY, term: 'skateboarding'}, (videos) => {
             this.setState({
                 selectedVideo: videos[0],
@@ -24,12 +25,17 @@ class App extends Component {
             });
         });
     }
+    onVideoSelect(video) {
+        this.setState({
+            selectedVideo: video
+        });
+    }
     render() {
         return (
             <div>
                 <SearchBar />
                 <VideoDetail video={this.state.selectedVideo} />
-                <VideList videos={this.state.videos} />
+                <VideList videos={this.state.videos} onVideoSelect={this.onVideoSelect.bind(this)} />
             </div>
         );
     }
