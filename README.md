@@ -9,9 +9,9 @@ First of all create a [Youtube API V3 Data API Key](https://console.developers.g
 
 After that you should do:
 
-    1. `npm install`
-    2. `npm start`
-    3. Open your browser in `http://localhost:3000`
+1. `npm install`
+2. `npm start`
+3. Open your browser in `http://localhost:3000`
     
 # License
 MIT [Alejandro Nanez Ortiz](http://github.com/alejandronanez)
