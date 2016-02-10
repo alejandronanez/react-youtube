@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import YTSearch from 'youtube-api-search';
 require('bootstrap/dist/css/bootstrap.min.css');
+require('./styles/style.css');
 
 import SearchBar from './components/search-bar';
 import VideoDetail from './components/video-detail';
