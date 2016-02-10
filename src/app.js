@@ -19,20 +19,23 @@ class App extends Component {
         };
     }
     componentDidMount() {
-        YTSearch({key: API_KEY, term: 'skateboarding'}, (videos) => {
+        this.videoSearch('javascript');
+    }
+    onVideoSelect(selectedVideo) {
+        this.setState({ selectedVideo });
+    }
+    videoSearch(term) {
+        YTSearch({key: API_KEY, term: term}, (videos) => {
             this.setState({
                 selectedVideo: videos[0],
                 videos: videos
             });
         });
     }
-    onVideoSelect(selectedVideo) {
-        this.setState({ selectedVideo });
-    }
     render() {
         return (
             <div>
-                <SearchBar />
+                <SearchBar onInputChange={this.videoSearch.bind(this)} />
                 <VideoDetail video={this.state.selectedVideo} />
                 <VideList videos={this.state.videos} onVideoSelect={this.onVideoSelect.bind(this)} />
             </div>

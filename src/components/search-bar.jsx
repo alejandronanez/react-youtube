@@ -9,9 +9,10 @@ class SearchBar extends Component {
         };
     }
     onInputChange(event) {
-        this.setState({
-            term: event.target.value
-        });
+        const term = event.target.value;
+
+        this.setState({ term });
+        this.props.onInputChange(term);
     }
     render() {
         return (
