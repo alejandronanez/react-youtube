@@ -26,10 +26,8 @@ class App extends Component {
             });
         });
     }
-    onVideoSelect(video) {
-        this.setState({
-            selectedVideo: video
-        });
+    onVideoSelect(selectedVideo) {
+        this.setState({ selectedVideo });
     }
     render() {
         return (
